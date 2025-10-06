@@ -1,0 +1,109 @@
+/* Main container for each product card */
+.outfit {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 250px;
+  margin: 10px;
+  background: linear-gradient(145deg, #f0f0f0, #e0e0e0); /* Light gradient background */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  padding: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  width: 90%; /* Responsive width */
+  height: auto;
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.4s ease; /* Smooth hover movement */
+}
+
+/* When you hover over a product card */
+.outfit:hover {
+  transform: translateY(-10px) scale(1.05); /* Move up and slightly enlarge */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+  background: linear-gradient(145deg, #ff8a00, #e52e71); /* Bright gradient background */
+}
+
+/* Product image styling */
+.outfit img {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  object-fit: cover; /* Keeps image proportions nicely */
+  transition: transform 0.4s ease; /* Zoom on hover */
+}
+
+/* Zoom image when hovering over card */
+.outfit:hover img {
+  transform: scale(1.1);
+}
+
+/* Product name text */
+.outfit p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; /* White text */
+  text-align: center;
+  margin-top: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Makes text stand out */
+}
+
+/* Price container */
+.outfit-prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* New price styling */
+.outfit-price-new {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Discount percentage next to new price */
+.discount {
+  font-size: 14px;
+  color: #ff4e50; /* Red color for emphasis */
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+/* Old price styling (crossed out) */
+.outfit-price-old {
+  font-size: 14px;
+  color: #ddd;
+  text-decoration: line-through; /* Strike-through effect */
+  margin-top: 5px;
+}
+
+/* Link styling — removes default blue underline */
+.outfit-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.outfit-link p {
+  text-decoration: none;
+}
+
+.outfit-link:hover p {
+  text-decoration: none;
+}
+
+/* Safety class if used elsewhere */
+.product-link {
+  text-decoration: none;
+}
+
+.product-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-link:focus {
+  outline: none;
+}

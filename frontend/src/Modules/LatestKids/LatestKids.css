@@ -1,0 +1,28 @@
+/* Container for the whole Latest Kids section */
+.latest {
+  text-align: center;        /* Center the text like the heading */
+  padding: 20px;             /* Add space around the section */
+}
+
+/* Container that holds all the product cards */
+.latest-outfit {
+  display: flex;             /* Use flexbox to arrange products */
+  flex-wrap: wrap-reverse;   /* Wrap items onto new lines, reversed order */
+  justify-content: center;   /* Center the items horizontally */
+  gap: 20px;                 /* Add space between each product */
+  padding: 10px;             /* Inner padding */
+}
+
+/* Styling for the "LATEST IN KIDS" heading */
+.latest h1 {
+  color: #333;               /* Dark gray text */
+  font-size: 24px;           /* Medium-large font size */
+  margin-bottom: 20px;       /* Space below the heading */
+}
+
+/* Styling for the horizontal line under the heading */
+.latest hr {
+  border: 1px solid #ddd;    /* Light gray line */
+  width: 50%;                /* Line is half the width of the container */
+  margin: 10px auto;         /* Center the line with top and bottom spacing */
+}

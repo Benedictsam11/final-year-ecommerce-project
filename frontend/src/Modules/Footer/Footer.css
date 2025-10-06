@@ -1,0 +1,73 @@
+/* Main footer container */
+.footer {
+  background: #111; /* Dark background for contrast */
+  color: #fff; /* White text for readability */
+  padding: 30px 0;
+  text-align: center;
+  position: relative; /* Helps with layout control */
+  width: 100%;
+  margin-top: auto; /* Push footer to bottom of page */
+}
+
+/* Layout for links (Company, Support, Socials) */
+.footer-links {
+  display: flex;
+  justify-content: space-around; /* Distribute columns evenly */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 20px; /* Space between columns */
+  margin-bottom: 20px;
+}
+
+/* Individual column styling */
+.footer-column {
+  flex: 1; /* Allows each column to grow equally */
+  min-width: 200px; /* Minimum width for mobile responsiveness */
+}
+
+/* Column title styling */
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ff8a00; /* Orange title color */
+}
+
+/* Footer links */
+.footer-column a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 2; /* Spacing between links */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Change link color on hover */
+.footer-column a:hover {
+  color: #ff8a00;
+}
+
+/* Social icons section */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 20px; /* Icon size */
+}
+
+/* Icon interactivity */
+.footer-socials svg {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-socials svg:hover {
+  color: #ff8a00; /* Highlight on hover */
+}
+
+/* Bottom bar (copyright) */
+.footer-bottom {
+  border-top: 1px solid #444; /* Light divider line */
+  padding-top: 10px;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 20px;
+}

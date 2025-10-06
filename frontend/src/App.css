@@ -1,0 +1,68 @@
+/* Main app wrapper to control layout structure */
+.App {
+  display: flex;
+  flex-direction: column; /* Stack navbar, video, content, and footer vertically */
+  min-height: 100vh; /* Ensure full viewport height is occupied */
+  text-align: center;
+}
+
+/* Container for everything between navbar and footer */
+.main-content {
+  flex-grow: 1; /* Take up all available vertical space */
+}
+
+/* Footer styling to stay at the bottom */
+footer {
+  margin-top: auto; /* Pushes footer to bottom if content is short */
+}
+
+/* React logo animation styles (optional or can be removed if unused) */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* Logo animation for users who haven't disabled motion */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Optional full-page header - unused in your current layout */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* Ensure promotional video section grows to fill available space */
+.video-container {
+  flex-grow: 1;
+}
+
+/* Product display section - placed after video */
+.latest-product {
+  margin-top: auto;
+  padding: 20px;
+}
+
+/* Link coloring (React default) */
+.App-link {
+  color: #61dafb;
+}
+
+/* Keyframes for spinning logo (optional) */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,49 @@
+/* Wrapper for the breadcrumb section */
+.wayfinder {
+  margin-top: 200px;         /* Adds space from top (to push it below navbar) */
+  margin-bottom: 20px;       /* Adds space below the breadcrumb */
+  font-size: 16px;           /* Set readable font size */
+  color: blue;               /* Text color for breadcrumb */
+  font-weight: 600;          /* Make the breadcrumb text bold */
+  padding: 10px 40px;        /* Adds padding on top/bottom and sides */
+  z-index: 10;               /* Keeps it layered above other content if needed */
+}
+
+/* The breadcrumb items list */
+.breadcrumb-list {
+  display: flex;             /* Puts items in a row */
+  align-items: center;       /* Aligns vertically */
+  flex-wrap: wrap;           /* Wraps to new line on smaller screens */
+  list-style: none;          /* Removes bullet points */
+  gap: 8px;                  /* Space between each item and arrow */
+  padding: 0;
+  margin: 0;
+}
+
+/* Each breadcrumb item and arrow */
+.breadcrumb-list li {
+  display: flex;             /* Put text and arrow in a row */
+  align-items: center;       /* Center vertically */
+  gap: 6px;                  /* Spacing between text and arrow */
+}
+
+/* Breadcrumb arrow icons */
+.wayfinder img {
+  width: 12px;               /* Small arrow */
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Breadcrumb links */
+.wayfinder a {
+  text-decoration: none;     /* Removes underline */
+  color: inherit;            /* Keeps same color as parent */
+  transition: color 0.2s ease; /* Smooth transition when hovering */
+}
+
+/* Link hover effect */
+.wayfinder a:hover {
+  text-decoration: underline; /* Underline to show it's clickable */
+  color: darkblue;            /* Darker color on hover */
+}

@@ -1,0 +1,106 @@
+/* Container for the ViewProduct component */
+.view-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 740px;
+  padding: 30px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Page heading style */
+.view-product h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+/* Grid layout for headers and each row */
+.viewproduct-format-main {
+  display: grid;
+  grid-template-columns: 60px 2fr 1fr 1fr 1fr 60px;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666666;
+}
+
+/* Remove spacing from column texts */
+.viewproduct-format-main p {
+  margin: 0;
+}
+
+/* Row-specific styling (white background, hover effect) */
+.viewproduct-format {
+  background: #ffffff;
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease;
+}
+
+/* Add a subtle shadow on hover for row highlight */
+.viewproduct-format:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Product image thumbnail */
+.viewproduct-product-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Remove (trash) icon */
+.viewproduct-remove-icon {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+/* Slight zoom on remove icon hover */
+.viewproduct-remove-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Scrollable section for product list */
+.viewproduct-allproducts {
+  width: 100%;
+  margin-top: 15px;
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+/* Horizontal line between product rows */
+.viewproduct-allproducts hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 0;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 800px) {
+  .view-product {
+    padding: 20px;
+  }
+
+  /* Collapse columns for mobile layout */
+  .viewproduct-format-main {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 12px;
+  }
+
+  .viewproduct-product-icon {
+    height: 40px;
+    width: 40px;
+  }
+}

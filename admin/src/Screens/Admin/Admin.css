@@ -1,0 +1,38 @@
+/* Admin container wraps the sidebar + main content */
+.admin-container {
+  display: flex; /* Side-by-side layout for sidebar and main panel */
+}
+
+/* Main content area of the admin panel */
+.admin-main {
+  flex: 1;              /* Takes full width except sidebar */
+  padding: 20px;        /* Space around content */
+}
+
+/* ---------- Global Styles ---------- */
+
+/* Apply box-sizing to all elements and reset margin/padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global body styling */
+body {
+  font-family: 'Inter', sans-serif; /* Clean and modern font */
+  background-color: #f1f5f9;        /* Light gray background */
+  color: #1e293b;                   /* Dark slate text color */
+}
+
+/* Heading font weight */
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+/* Optional container utility class */
+.container {
+  max-width: 1200px;    /* Responsive layout limit */
+  margin: auto;         /* Center horizontally */
+  padding: 24px;        /* Inner padding */
+}

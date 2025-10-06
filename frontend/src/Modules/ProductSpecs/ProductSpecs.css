@@ -1,0 +1,120 @@
+.productspec {
+    margin: 80px auto;
+    max-width: 1000px;
+    padding: 40px;
+    border-radius: 12px;
+    background: #f9f9f9;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.productspec-navigator {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.productspec-nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+    color: #333;
+}
+
+.productspec-nav-box.active {
+    border-bottom: 3px solid #ff6600;
+    color: #ff6600;
+}
+
+/* Product Description & Reviews Section */
+.productspec-product {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Reviews Section */
+.reviews-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual Review Card */
+.review-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.review-card h4 {
+    font-size: 16px;
+    color: #333;
+}
+
+.review-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ⭐ Review Form (moved outside media query) */
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.review-form button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.review-form button:hover {
+    background-color: #e65c00;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .productspec {
+        margin: 50px auto;
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .productspec-nav-box {
+        font-size: 16px;
+        width: 150px;
+        height: 50px;
+    }
+
+    .productspec-product {
+        padding: 30px;
+    }
+}

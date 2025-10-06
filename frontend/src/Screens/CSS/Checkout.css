@@ -1,0 +1,103 @@
+/* src/Pages/Checkout.css */
+.checkout-page {
+  max-width: 600px;
+  margin: 200px auto 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-page h1,
+.checkout-page h2,
+.checkout-page h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.checkout-form input,
+.checkout-card-details input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.checkout-payment label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.checkout-payment input {
+  margin-right: 8px;
+}
+
+.checkout-card-details {
+  margin-top: 10px;
+}
+
+.checkout-card-details input {
+  margin-bottom: 10px;
+}
+
+.checkout-items {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.checkout-items li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.place-order-button {
+  padding: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  margin-top: 25px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.place-order-button:hover {
+  background-color: #45a049;
+}
+.pod-info {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.pod-info p {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+
+@media (max-width: 600px) {
+  .checkout-page {
+    padding: 15px;
+  }
+
+  .place-order-button,
+  .checkout-form input,
+  .checkout-card-details input {
+    font-size: 14px;
+  }
+
+  .checkout-page h2,
+  .checkout-page h3 {
+    font-size: 20px;
+  }
+}

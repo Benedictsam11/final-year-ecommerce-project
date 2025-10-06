@@ -1,0 +1,91 @@
+.upload-product {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.uploadproduct-itemfield {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.uploadproduct-itemfield p {
+  font-weight: 600;
+  font-size: 15px;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.uploadproduct-itemfield input,
+.upload-product-selector {
+  padding: 10px 14px;
+  border: 1px solid #ccd6dd;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fafafa;
+  transition: border-color 0.2s ease;
+}
+
+.uploadproduct-itemfield input:focus,
+.upload-product-selector:focus {
+  border-color: #3498db;
+  background-color: #fff;
+  outline: none;
+}
+
+.uploadproduct-price {
+  display: flex;
+  gap: 20px;
+}
+
+.uploadproduct-thumbnail-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border: 2px dashed #b0bec5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.uploadproduct-thumbnail-img:hover {
+  border-color: #3498db;
+}
+
+.uploadproduct-btn {
+  margin-top: 25px;
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.uploadproduct-btn:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 800px) {
+  .uploadproduct-price {
+    flex-direction: column;
+  }
+
+  .uploadproduct-thumbnail-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .upload-product {
+    padding: 20px;
+  }
+}

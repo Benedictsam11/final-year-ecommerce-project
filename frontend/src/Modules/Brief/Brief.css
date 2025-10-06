@@ -1,0 +1,170 @@
+/* ======= Root variables for both light and dark modes ======= */
+:root {
+  --primary-bg-light: #ff8a00;       /* Orange gradient color */
+  --primary-bg-dark: #e52e71;        /* Pink gradient color */
+  --text-light: #fff;                /* White text */
+  --text-dark: #333;                 /* Dark text */
+  --button-bg-light: #000;          
+  --button-bg-dark: #333;            /* Dark grey button */
+  --button-hover-light: #2c0d0d;     
+  --button-hover-dark: #ff4e50;      
+}
+
+/* ======= DARK MODE styles (automatically applied if user has dark mode on) ======= */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;        /* Dark background */
+    color: var(--text-light);         /* Light text */
+  }
+
+  .brief {
+    background: linear-gradient(135deg, var(--primary-bg-dark), var(--primary-bg-light));
+  }
+
+  .brief h1, .brief p {
+    color: var(--text-light);
+  }
+
+  .brief button {
+    background: var(--button-bg-dark);
+  }
+
+  .brief button:hover {
+    background: var(--button-hover-dark);
+  }
+
+  .brief-input-container {
+    background: #1a1414;
+  }
+
+  .brief input {
+    color: #fff;
+    background-color: #444;           /* Input field background in dark mode */
+  }
+}
+
+/* ======= LIGHT MODE default styles ======= */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  color: var(--text-dark);
+}
+
+/* ======= Main container for the email newsletter ======= */
+.brief {
+  width: 800%;                         /* Probably too wide — consider changing to 100% or max-width */
+  max-width: 900px;                    /* Maximum width of container */
+  margin: auto;
+  margin-top: 100px;                   /* Pushes component lower */
+  margin-bottom: 100px;
+  padding: 30px;
+  background: linear-gradient(135deg, var(--primary-bg-light), var(--primary-bg-dark));
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  animation: fadeIn 0.8s ease-out forwards;
+  transition: transform 0.3s ease;
+}
+
+/* Slight lift effect when hovering over the container */
+.brief:hover {
+  transform: translateY(-5px);
+}
+
+/* ======= Animation when component appears ======= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======= Text styles ======= */
+.brief h1 {
+  color: var(--text-light);
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.brief p {
+  color: var(--text-light);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* ======= Email + Button container ======= */
+.brief-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  width: 100%;
+  max-width: 900px;
+  height: 60px;
+  border-radius: 80px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* ======= Email input field styles ======= */
+.brief input {
+  width: 100%;
+  padding: 0 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-dark);
+  background-color: #fff;
+}
+
+/* ======= Subscribe button styles ======= */
+.brief button {
+  width: 200px;
+  height: 100%;
+  border: none;
+  background: var(--button-bg-light);
+  color: var(--text-light);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  letter-spacing: 1px;
+}
+
+/* Hover effect for button */
+.brief button:hover {
+  background: var(--button-hover-light);
+  transform: scale(1.05);
+}
+
+/* Click effect for button */
+.brief button:active {
+  transform: scale(0.95);
+  background: var(--primary-bg-dark);
+}
+
+/* ======= Responsive adjustments for smaller screens ======= */
+@media (max-width: 768px) {
+  .brief-input-container {
+    width: 90%;
+  }
+
+  .brief input:focus {
+    transform: scale(1.05);
+    border: 1px solid #ff8a00;
+  }
+}

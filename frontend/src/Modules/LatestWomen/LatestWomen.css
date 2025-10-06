@@ -1,0 +1,22 @@
+/* Main container for latest women's section */
+.latest {
+  text-align: center;             /* Center all text inside */
+  padding: 20px;                  /* Space around the content */
+  background-color: #fdfdfd;      /* Light background to match clean design */
+}
+
+/* Title styling */
+.latest h1 {
+  font-size: 2rem;                /* Bigger font for the title */
+  color: #e91e63;                 /* Pink color to give a feminine/women's touch */
+  margin-bottom: 20px;           /* Space below the title */
+}
+
+/* Grid for product cards */
+.latest-outfit {
+  display: flex;                 /* Use flexbox to arrange product cards */
+  flex-wrap: wrap;              /* Allow products to wrap to next line on smaller screens */
+  justify-content: center;      /* Center the items horizontally */
+  gap: 20px;                    /* Add space between product cards */
+  padding: 10px;                /* Space inside the container */
+}

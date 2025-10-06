@@ -1,0 +1,116 @@
+/* Wishlist.css - Styles for wishlist items layout and interaction */
+
+.wishlist-page {
+  padding: 120px 60px 60px 60px;
+  background-color: #fefefe;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.wishlist-page h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Header row (Product, Title, Price, etc.) */
+.wishlist-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1.5fr;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Each item container */
+.wishlist-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+  padding: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Grid for each wishlist row */
+.wishlist-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1.5fr;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+/* Product image */
+.wishlist-product-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Wishlist action buttons */
+.wishlist-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Add to bag button */
+.wishlist-actions button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wishlist-actions button:hover {
+  background-color: #45a049;
+}
+
+/* Remove icon */
+.wishlist-remove-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.wishlist-remove-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Empty wishlist message */
+.wishlist-empty {
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 40px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .wishlist-header,
+  .wishlist-row {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .wishlist-page {
+    padding: 60px 20px;
+  }
+
+  .wishlist-actions {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .wishlist-actions button {
+    width: 100%;
+  }
+}

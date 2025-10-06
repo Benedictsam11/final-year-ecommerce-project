@@ -1,0 +1,42 @@
+/* Container styling for the Thank You page */
+.thank-you {
+  min-height: 80vh; /* Ensure the section covers most of the viewport height */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center;     /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f9f9; /* Light background for a clean look */
+}
+
+/* Heading styling */
+.thank-you h1 {
+  font-size: 2.5rem; /* Large title */
+  margin-bottom: 20px;
+  color: #333;       /* Dark grey for readability */
+}
+
+/* Paragraph (message) styling */
+.thank-you p {
+  font-size: 1.2rem;  /* Slightly larger text */
+  margin-bottom: 10px;
+  color: #666;        /* Lighter grey for subtext */
+}
+
+/* Button to return to the homepage */
+.continue-shopping-btn {
+  margin-top: 25px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;  /* Blue background */
+  border-radius: 5px;
+  text-decoration: none;      /* Remove underline from link */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Button hover effect */
+.continue-shopping-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

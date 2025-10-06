@@ -1,0 +1,70 @@
+/* Container that centers the login form vertically and horizontally */
+.admin-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f1f5f9; /* light background */
+  padding: 20px;
+}
+
+/* Login form styling */
+.admin-login-form {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Form heading */
+.admin-login-form h2 {
+  text-align: center;
+  color: #1e293b;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Input fields */
+.admin-login-form input {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.2s ease;
+}
+
+/* Input focus state */
+.admin-login-form input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Submit button */
+.admin-login-form button {
+  padding: 12px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect for button */
+.admin-login-form button:hover {
+  background-color: #2980b9;
+}
+
+/* Optional: Error message styling (if added later) */
+.admin-login-error {
+  color: #e63946;
+  font-size: 14px;
+  text-align: center;
+}

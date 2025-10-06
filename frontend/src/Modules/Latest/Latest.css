@@ -1,0 +1,104 @@
+/* ====================
+   LATEST PRODUCTS STYLES
+   ==================== */
+
+/* Main container for the latest section */
+.latest {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4; /* Light background for contrast */
+}
+
+/* Section heading */
+.latest h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Container for product cards */
+.latest-outfit {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to move to the next line */
+  justify-content: center; /* Center-align all items */
+  gap: 20px; /* Spacing between items */
+  padding: 10px;
+}
+
+/* ====================
+   PRODUCT CARD STYLES
+   ==================== */
+
+/* Individual product card */
+.outfit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 250px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for product cards */
+.outfit:hover {
+  transform: translateY(-10px); /* Slight lift */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+/* Product image */
+.outfit img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Product name */
+.outfit p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Price display section */
+.outfit-prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* New price style */
+.outfit-price-new {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Old price style (strikethrough) */
+.outfit-price-old {
+  font-size: 14px;
+  color: #888;
+  text-decoration: line-through;
+  margin-top: 5px;
+}
+
+/* ====================
+   RESPONSIVE DESIGN
+   ==================== */
+
+@media (max-width: 768px) {
+  .latest-outfit {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .outfit {
+    max-width: 90%;
+  }
+}

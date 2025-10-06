@@ -1,0 +1,236 @@
+/* ==================== Main Layout ==================== */
+.productcard {
+    display: flex; /* Lays out image and details side by side */
+    gap: 50px;
+    padding: 50px;
+    margin: 50px auto;
+    max-width: 1200px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    align-items: start;
+}
+
+/* Hover shadow effect */
+.productcard:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================== Left Image Section ==================== */
+.productcard-left {
+    display: flex;
+    flex-direction: column; /* Stacks thumbnails vertically */
+    align-items: center;
+    gap: 16px;
+}
+
+/* Thumbnails under main image */
+.productcard-img-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.productcard-img-list img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.productcard-img-list img:hover {
+    transform: scale(1.1);
+}
+
+/* Main large image */
+.productcard-main-img {
+    width: 500px;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.productcard-main-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* ==================== Right Details Section ==================== */
+.productcard-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Product title */
+.productcard-right h1 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Star rating layout */
+.productcard-right-star {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+.productcard-right-star img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Pricing style */
+.productcard-right-prices {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.productcard-right-price-old {
+    color: #888;
+    text-decoration: line-through;
+}
+
+.productcard-right-price-new {
+    color: #e63946;
+}
+
+/* Optional short description */
+.productcard-right-description {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Size selector styling */
+.productcard-right-size {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.productcard-right-size h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.productcard-right-size-options {
+    display: flex;
+    gap: 10px;
+}
+
+/* Size button look */
+.productcard-right-size-options div {
+    padding: 12px 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.productcard-right-size-options div:hover,
+.productcard-right-size-options div.active {
+    background-color: #ff6600;
+    color: white;
+    border-color: #ff4500;
+    transform: scale(1.05);
+}
+
+/* ==================== Buttons ==================== */
+.productcard-right button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff6600, #ff4500);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for buttons */
+.productcard-right button:hover {
+    background: linear-gradient(135deg, #ff4500, #cc3700);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Category/Tag info (no longer used but retained for styling) */
+.productcard-right-category {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.productcard-right-category span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* ==================== Accordion Section ==================== */
+.accordion-section {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+}
+
+.accordion-header {
+    cursor: pointer;
+    padding: 12px 0;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion-body {
+    padding: 10px 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 1024px) {
+    .productcard {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .productcard-left {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .productcard-main-img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .productcard-right {
+        align-items: center;
+    }
+
+    .productcard-right-size-options {
+        justify-content: center;
+    }
+
+    .productcard-right button {
+        max-width: 300px;
+    }
+}

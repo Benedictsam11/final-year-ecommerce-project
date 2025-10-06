@@ -1,0 +1,98 @@
+/* ============================= */
+/* Wrapper for the entire product page layout */
+/* ============================= */
+.product-page {
+  padding-top: 50px;              /* Prevent content from going under navbar */
+  padding-bottom: 20px;           /* Adds space below the product section */
+  background-color: #f9f9f9;      /* Light gray background for contrast */
+  position: relative;
+  z-index: 10;                    /* Ensure it's above overlapping backgrounds */
+}
+
+/* ============================= */
+/* Container for product content */
+/* ============================= */
+.product-details {
+  max-width: 1200px;              /* Limit content width for readability */
+  margin: 0 auto;                 /* Center the container */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;                      /* Space between inner elements */
+  background-color: #fff;         /* White box for the product section */
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for elevation */
+  border-radius: 8px;
+  position: relative;
+  z-index: 20;                    /* Keeps this above other background elements */
+}
+
+/* ============================= */
+/* Breadcrumb (Wayfinder) Styles */
+/* ============================= */
+.wayfinder {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 30;
+}
+
+.wayfinder img {
+  margin: 0 8px;                  /* Adds spacing between arrows and text */
+}
+
+.wayfinder a {
+  text-decoration: none;
+  color: inherit;                 /* Inherit current text color */
+}
+
+/* ============================= */
+/* Product Image */
+/* ============================= */
+.product-details img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;            /* Slight rounding for polished look */
+}
+
+/* ============================= */
+/* Product Name Heading */
+/* ============================= */
+.product-details h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* ============================= */
+/* Product Description */
+/* ============================= */
+.product-details p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;              /* Improves readability */
+}
+
+/* ============================= */
+/* Price Section Styling */
+/* ============================= */
+.product-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff4e50;                /* Bright highlight for new price */
+  margin-top: 10px;
+}
+
+.old-price {
+  text-decoration: line-through; /* Strike through for old price */
+  color: #888;                   /* Muted gray for older price */
+  margin-right: 10px;
+}
+
+.new-price {
+  color: #ff4e50;                /* Bright pinkish color for final price */
+  font-size: 22px;
+  font-weight: bold;
+}

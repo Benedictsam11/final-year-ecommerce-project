@@ -1,0 +1,32 @@
+/* Styling for the video containers */
+.video-container {
+    position: relative;
+    margin-top: 90px; /* Move the content down to ensure it's under the navbar */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px; /* Reduced gap between videos */
+}
+
+/* Styling for the second video container */
+.video-container.second-video {
+    margin-top:-0%; /* Adjust this value to move the second video up */
+}
+
+/* Styling for videos */
+video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Styling for h1 */
+h1 {
+    margin-bottom: 20px; /* Adds space between the text and the video */
+    font-size: 24px;
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adds a nice text shadow for visibility */
+}
