@@ -26,6 +26,11 @@ Features include authentication, cart & wishlist, promo codes, checkout (PayPal/
 ---
 
 ## 🧱 Monorepo Structure
+final-year-ecommerce-project/
+├─ backend/ # Express API, MongoDB, Nodemailer, PayPal server logic
+├─ frontend/ # React app (shop UI)
+└─ admin/ # (Optional) separate admin UI if used
+
 
 
 ---
@@ -48,10 +53,15 @@ Features include authentication, cart & wishlist, promo codes, checkout (PayPal/
 ```bash
 git clone https://github.com/Benedictsam11/final-year-ecommerce-project.git
 cd final-year-ecommerce-project
+
+
 cd backend && npm install
 cd ../frontend && npm install
 # (if you have a separate admin app)
 cd ../admin && npm install
+
+
+
 PORT=5000
 MONGODB_URI=<your_mongodb_atlas_connection_string>
 JWT_SECRET=<your_jwt_secret>
@@ -62,8 +72,25 @@ SMTP_HOST=<if using SMTP>
 SMTP_PORT=<if using SMTP>
 SMTP_USER=<if using SMTP>
 SMTP_PASS=<if using SMTP>
+
+
+
+Run the apps (dev)
+
+Open two terminals:
+
+Backend
+
 cd backend
 npm run dev   # or: node index.js / nodemon
+
+
+Frontend
+
 cd frontend
 npm start
 
+
+Frontend: http://localhost:3000
+
+Backend: http://localhost:5000
