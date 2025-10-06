@@ -1,44 +1,69 @@
-# 🛍️ Full-Stack E-Commerce Web Application (Final Year Project)
+# 🛍️ Full-Stack MERN E-Commerce (Final Year Project)
 
-This is my **Final Year Computer Science Project** — a modern, full-stack e-commerce platform built using the **MERN stack (MongoDB, Express.js, React.js, Node.js)**.  
-It provides a complete online shopping experience including product browsing, cart and wishlist management, secure checkout, PayPal integration, and an admin dashboard for product and order management.
+A modern e-commerce platform built with the **MERN stack** (MongoDB, Express.js, React.js, Node.js).  
+Features include authentication, cart & wishlist, promo codes, checkout (PayPal/COD), orders, and an admin dashboard with email notifications.
 
----
-
-## 🚀 Features
-
-### 👤 User-Side
-- Secure **User Authentication** (Register, Login, Logout, Password Reset)
-- Browse products by **category, search, and filters**
-- Add/Remove items from **Cart** and **Wishlist**
-- Apply **Promo Codes** (e.g. `SPRING20`)
-- Multiple **Payment Methods**: PayPal, Card, Pay on Delivery
-- View **Order History** with delivery info
-- Responsive design for all devices
-
-### 🛠️ Admin-Side
-- Protected **Admin Login**
-- Manage Products (Add, Edit, Delete)
-- Upload product images
-- View all Orders and update statuses
-- Receive **Email Notifications** via Nodemailer when new orders are placed
+> **Repo:** https://github.com/Benedictsam11/final-year-ecommerce-project
 
 ---
 
-## 🧩 Tech Stack
+## ✨ Key Features
 
-| Layer | Technologies |
-|-------|---------------|
-| **Frontend** | React.js, Context API, React Router, Tailwind CSS |
-| **Backend** | Node.js, Express.js |
-| **Database** | MongoDB (Mongoose) |
-| **Other Tools** | JWT Authentication, PayPal SDK, Nodemailer, Render, Vercel |
+### Shopper
+- Register / Login / Logout / Password reset (JWT)
+- Browse by category, search, sort & filter
+- Cart and Wishlist with persistence
+- Promo code support (e.g. `SPRING20`)
+- Checkout with **PayPal** or **Cash on Delivery**
+- Order history & status
+
+### Admin
+- Secure admin login
+- Product CRUD + image uploads
+- View/manage orders, update status
+- **Email notifications** via Nodemailer
 
 ---
 
-## ⚙️ Installation & Setup
+## 🧱 Monorepo Structure
 
-### 1️⃣ Clone the repository
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, React Router, Context API, (CSS/Tailwind)
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB (Mongoose)
+- **Auth:** JWT (access/refresh pattern or single-token)
+- **Payments:** PayPal SDK
+- **Email:** Nodemailer
+- **Hosting (suggested):** Vercel (frontend), Render (backend), MongoDB Atlas (DB)
+
+---
+
+## ⚙️ Getting Started (Local)
+
+### 1) Clone
 ```bash
-git clone https://github.com/yourusername/final-year-ecommerce-project.git
+git clone https://github.com/Benedictsam11/final-year-ecommerce-project.git
 cd final-year-ecommerce-project
+cd backend && npm install
+cd ../frontend && npm install
+# (if you have a separate admin app)
+cd ../admin && npm install
+PORT=5000
+MONGODB_URI=<your_mongodb_atlas_connection_string>
+JWT_SECRET=<your_jwt_secret>
+PAYPAL_CLIENT_ID=<your_paypal_client_id>
+ADMIN_EMAIL=<admin_login_email_if_applicable>
+ADMIN_PASSWORD=<admin_login_password_if_applicable>
+SMTP_HOST=<if using SMTP>
+SMTP_PORT=<if using SMTP>
+SMTP_USER=<if using SMTP>
+SMTP_PASS=<if using SMTP>
+cd backend
+npm run dev   # or: node index.js / nodemon
+cd frontend
+npm start
+
